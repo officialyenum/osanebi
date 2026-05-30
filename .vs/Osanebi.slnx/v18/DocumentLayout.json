@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|solutionrelative:osanebi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.api\\areas\\publicarea\\controllers\\publiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|solutionrelative:osanebi.api\\areas\\publicarea\\controllers\\publiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PublicController.cs",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Areas\\PublicArea\\Controllers\\PublicController.cs",
+              "RelativeDocumentMoniker": "Osanebi.Api\\Areas\\PublicArea\\Controllers\\PublicController.cs",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Areas\\PublicArea\\Controllers\\PublicController.cs",
+              "RelativeToolTip": "Osanebi.Api\\Areas\\PublicArea\\Controllers\\PublicController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T11:48:15.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Osanebi.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Program.cs",
+              "RelativeToolTip": "Osanebi.Api\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAuwBsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T11:44:09.507Z",
+              "EditorCaption": ""
             }
           ]
         }

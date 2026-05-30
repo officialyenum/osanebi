@@ -1,4 +1,7 @@
 
+using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
+using Microsoft.OpenApi;
+
 namespace Osanebi.Api
 {
     public class Program
@@ -12,21 +15,37 @@ namespace Osanebi.Api
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Osanebi API",
+                    Description = "An ASP.NET Core Web API for Osanebi application.",
+                });
+            });
 
-            var app = builder.Build();
+                var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
-                app.MapOpenApi();
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Osanebi API V1");
+                    c.RoutePrefix = string.Empty; // Set Swagger UI at the app's root
+                });
             }
 
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
 
-
-            app.MapControllers();
+            app.MapControllerRoute(
+                name : "areas",
+                pattern : "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+            );
 
             app.Run();
         }
