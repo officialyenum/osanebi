@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Osanebi.Api\\Osanebi.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Osanebi.WebBlazor\\Osanebi.WebBlazor.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
