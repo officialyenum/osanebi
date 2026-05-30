@@ -1,6 +1,6 @@
 # OSANEBI
 
-## Real‑Time QA & Playtesting Platform
+### Real‑Time QA & Playtesting Platform
 
 Osanebi is a platform built to support indie game studios during QA and playtesting sessions. It connects studios and playtesters, enabling real‑time experience reporting, structured feedback, and AI‑powered insights that help teams improve their games faster and more effectively.
 
