@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Osanebi.Model.Identity;
 
-namespace Osanebi.Api.Data;
+namespace Osanebi.DataAccess;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 {

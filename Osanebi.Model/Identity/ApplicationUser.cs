@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Identity;
-namespace Osanebi.Api.Data;
+namespace Osanebi.Model.Identity;
 // Add profile data for application users by adding properties to the ApplicationUser class
 public class ApplicationUser : IdentityUser
 {
