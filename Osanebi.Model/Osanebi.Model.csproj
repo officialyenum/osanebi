@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Osanebi.Utility\Osanebi.Utility.csproj" />
+  </ItemGroup>
+
 </Project>
