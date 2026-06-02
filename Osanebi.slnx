@@ -1,5 +1,8 @@
 <Solution>
   <Project Path="Osanebi.Api/Osanebi.Api.csproj" />
+  <Project Path="Osanebi.DataAccess/Osanebi.DataAccess.csproj" Id="47f972fc-9ac1-4eec-a8a9-def289490548" />
+  <Project Path="Osanebi.Model/Osanebi.Model.csproj" Id="0fedd381-cad0-4b1c-8110-783834f6a653" />
+  <Project Path="Osanebi.Service/Osanebi.Service.csproj" Id="99931f70-b904-46df-a07d-5a6f7dc867f1" />
   <Project Path="Osanebi.Utility/Osanebi.Utility.csproj" Id="cd7d367b-4f89-43f2-8cee-68861a3d912a" />
   <Project Path="Osanebi.WebBlazor/Osanebi.WebBlazor.csproj" Id="8ab504ea-f949-4efe-92d4-f9cb8dc2a567" />
 </Solution>
