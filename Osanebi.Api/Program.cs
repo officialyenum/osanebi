@@ -1,9 +1,5 @@
-
-using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
-using Microsoft.OpenApi;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Osanebi.Api.Data;
+using Microsoft.OpenApi;
 
 namespace Osanebi.Api
 {
@@ -33,7 +29,7 @@ namespace Osanebi.Api
                 });
             });
 
-                var app = builder.Build();
+            var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -51,8 +47,8 @@ namespace Osanebi.Api
             app.UseAuthorization();
 
             app.MapControllerRoute(
-                name : "areas",
-                pattern : "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                name: "areas",
+                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
             );
 
             app.Run();
