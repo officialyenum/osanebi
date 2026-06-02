@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CD7D367B-4F89-43F2-8CEE-68861A3D912A}|Osanebi.Utility\\Osanebi.Utility.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.utility\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD7D367B-4F89-43F2-8CEE-68861A3D912A}|Osanebi.Utility\\Osanebi.Utility.csproj|solutionrelative:osanebi.utility\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.api\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|solutionrelative:osanebi.api\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -50,11 +54,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Utility\\Class1.cs",
+              "RelativeDocumentMoniker": "Osanebi.Utility\\Class1.cs",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Utility\\Class1.cs",
+              "RelativeToolTip": "Osanebi.Utility\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T00:05:10.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Data\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Osanebi.Api\\Data\\ApplicationUser.cs",
@@ -62,12 +79,11 @@
               "RelativeToolTip": "Osanebi.Api\\Data\\ApplicationUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-30T13:07:29.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-30T13:07:29.929Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Osanebi.Api\\Data\\ApplicationDbContext.cs",
@@ -80,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\appsettings.json",
               "RelativeDocumentMoniker": "Osanebi.Api\\appsettings.json",
@@ -88,12 +104,11 @@
               "RelativeToolTip": "Osanebi.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-30T12:17:53.182Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-30T12:17:53.182Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Osanebi.Api\\Properties\\launchSettings.json",
@@ -105,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\appsettings.json",
               "RelativeDocumentMoniker": "Osanebi.WebBlazor\\appsettings.json",
@@ -117,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Program.cs",
               "RelativeDocumentMoniker": "Osanebi.WebBlazor\\Program.cs",
@@ -129,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PublicController.cs",
               "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Areas\\PublicArea\\Controllers\\PublicController.cs",
               "RelativeDocumentMoniker": "Osanebi.Api\\Areas\\PublicArea\\Controllers\\PublicController.cs",
@@ -141,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Program.cs",
               "RelativeDocumentMoniker": "Osanebi.Api\\Program.cs",
@@ -149,12 +164,11 @@
               "RelativeToolTip": "Osanebi.Api\\Program.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAgwAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-30T11:44:09.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-30T11:44:09.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Osanebi.WebBlazor\\Properties\\launchSettings.json",
@@ -166,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\App.razor",
               "RelativeDocumentMoniker": "Osanebi.WebBlazor\\Components\\App.razor",
