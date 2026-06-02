@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 using Osanebi.DataAccess;
 using Osanebi.Model.Identity;
+using System.Diagnostics;
 
 namespace Osanebi.Api
 {
@@ -38,7 +39,15 @@ namespace Osanebi.Api
                 app.UseSwaggerUI(c =>
                 {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Osanebi API V1");
-                    c.RoutePrefix = string.Empty; // Set Swagger UI at the app's root
+                    c.RoutePrefix = "documentation"; // Set Swagger UI at the /documentation
+                    //c.RoutePrefix = string.Empty; // Set Swagger UI at the app's root
+                });
+
+                var url = "https://localhost:7070/documentation";
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
                 });
             }
 

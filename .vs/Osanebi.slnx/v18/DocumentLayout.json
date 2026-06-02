@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|solutionrelative:osanebi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|solutionrelative:osanebi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|solutionrelative:osanebi.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F972FC-9AC1-4EEC-A8A9-DEF289490548}|Osanebi.DataAccess\\Osanebi.DataAccess.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.dataaccess\\migrations\\20260602011254_addidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F972FC-9AC1-4EEC-A8A9-DEF289490548}|Osanebi.DataAccess\\Osanebi.DataAccess.csproj|solutionrelative:osanebi.dataaccess\\migrations\\20260602011254_addidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F972FC-9AC1-4EEC-A8A9-DEF289490548}|Osanebi.DataAccess\\Osanebi.DataAccess.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.dataaccess\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F972FC-9AC1-4EEC-A8A9-DEF289490548}|Osanebi.DataAccess\\Osanebi.DataAccess.csproj|solutionrelative:osanebi.dataaccess\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F972FC-9AC1-4EEC-A8A9-DEF289490548}|Osanebi.DataAccess\\Osanebi.DataAccess.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.dataaccess\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F972FC-9AC1-4EEC-A8A9-DEF289490548}|Osanebi.DataAccess\\Osanebi.DataAccess.csproj|solutionrelative:osanebi.dataaccess\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F972FC-9AC1-4EEC-A8A9-DEF289490548}|Osanebi.DataAccess\\Osanebi.DataAccess.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.dataaccess\\osanebi.dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{47F972FC-9AC1-4EEC-A8A9-DEF289490548}|Osanebi.DataAccess\\Osanebi.DataAccess.csproj|solutionrelative:osanebi.dataaccess\\osanebi.dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.api\\osanebi.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|solutionrelative:osanebi.api\\osanebi.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD7D367B-4F89-43F2-8CEE-68861A3D912A}|Osanebi.Utility\\Osanebi.Utility.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.utility\\osanebi.utility.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CD7D367B-4F89-43F2-8CEE-68861A3D912A}|Osanebi.Utility\\Osanebi.Utility.csproj|solutionrelative:osanebi.utility\\osanebi.utility.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0FEDD381-CAD0-4B1C-8110-783834F6A653}|Osanebi.Model\\Osanebi.Model.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.model\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FEDD381-CAD0-4B1C-8110-783834F6A653}|Osanebi.Model\\Osanebi.Model.csproj|solutionrelative:osanebi.model\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,22 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8AB504EA-F949-4EFE-92D4-F9CB8DC2A567}|Osanebi.WebBlazor\\Osanebi.WebBlazor.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.webblazor\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8AB504EA-F949-4EFE-92D4-F9CB8DC2A567}|Osanebi.WebBlazor\\Osanebi.WebBlazor.csproj|solutionrelative:osanebi.webblazor\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|solutionrelative:osanebi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|solutionrelative:osanebi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A751442E-CB84-7E8B-16E9-505DFEAD658C}|Osanebi.Api\\Osanebi.Api.csproj|solutionrelative:osanebi.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47F972FC-9AC1-4EEC-A8A9-DEF289490548}|Osanebi.DataAccess\\Osanebi.DataAccess.csproj|c:\\users\\opone\\documents\\dotnet\\osanebi\\osanebi.dataaccess\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47F972FC-9AC1-4EEC-A8A9-DEF289490548}|Osanebi.DataAccess\\Osanebi.DataAccess.csproj|solutionrelative:osanebi.dataaccess\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,17 +78,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\App.razor",
               "RelativeDocumentMoniker": "Osanebi.WebBlazor\\Components\\App.razor",
               "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\App.razor",
               "RelativeToolTip": "Osanebi.WebBlazor\\Components\\App.razor",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-05-30T12:10:09.63Z",
               "IsPinned": true,
@@ -76,98 +96,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Gender.cs",
-              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Model\\Enums\\Gender.cs",
-              "RelativeDocumentMoniker": "Osanebi.Model\\Enums\\Gender.cs",
-              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Model\\Enums\\Gender.cs",
-              "RelativeToolTip": "Osanebi.Model\\Enums\\Gender.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T00:52:17.186Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Program.cs",
-              "RelativeDocumentMoniker": "Osanebi.WebBlazor\\Program.cs",
-              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Program.cs",
-              "RelativeToolTip": "Osanebi.WebBlazor\\Program.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Title": "20260602011254_AddIdentity.cs",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.DataAccess\\Migrations\\20260602011254_AddIdentity.cs",
+              "RelativeDocumentMoniker": "Osanebi.DataAccess\\Migrations\\20260602011254_AddIdentity.cs",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.DataAccess\\Migrations\\20260602011254_AddIdentity.cs",
+              "RelativeToolTip": "Osanebi.DataAccess\\Migrations\\20260602011254_AddIdentity.cs",
+              "ViewState": "AgIAAM0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T00:46:39.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Error.razor",
-              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Pages\\Error.razor",
-              "RelativeDocumentMoniker": "Osanebi.WebBlazor\\Components\\Pages\\Error.razor",
-              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Pages\\Error.razor",
-              "RelativeToolTip": "Osanebi.WebBlazor\\Components\\Pages\\Error.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-02T00:45:29.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "Osanebi.WebBlazor\\Components\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Pages\\Home.razor",
-              "RelativeToolTip": "Osanebi.WebBlazor\\Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-02T00:44:58.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NotFound.razor",
-              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Pages\\NotFound.razor",
-              "RelativeDocumentMoniker": "Osanebi.WebBlazor\\Components\\Pages\\NotFound.razor",
-              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Pages\\NotFound.razor",
-              "RelativeToolTip": "Osanebi.WebBlazor\\Components\\Pages\\NotFound.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-02T00:42:07.731Z",
+              "WhenOpened": "2026-06-02T01:12:55.192Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Model\\Identity\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "Osanebi.Model\\Identity\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Model\\Identity\\ApplicationUser.cs",
-              "RelativeToolTip": "Osanebi.Model\\Identity\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Osanebi.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Program.cs",
+              "RelativeToolTip": "Osanebi.Api\\Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAwCkAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T00:28:58.811Z",
+              "WhenOpened": "2026-06-02T00:35:49.565Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Routes.razor",
-              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Routes.razor",
-              "RelativeDocumentMoniker": "Osanebi.WebBlazor\\Components\\Routes.razor",
-              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Routes.razor",
-              "RelativeToolTip": "Osanebi.WebBlazor\\Components\\Routes.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-02T00:37:29.726Z",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "Osanebi.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\appsettings.json",
+              "RelativeToolTip": "Osanebi.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-02T00:36:31.4Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Osanebi.Api\\appsettings.Development.json",
@@ -180,41 +148,158 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "Osanebi.Api\\appsettings.json",
-              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\appsettings.json",
-              "RelativeToolTip": "Osanebi.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-02T00:36:31.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Program.cs",
-              "RelativeDocumentMoniker": "Osanebi.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Program.cs",
-              "RelativeToolTip": "Osanebi.Api\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.DataAccess\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Osanebi.DataAccess\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.DataAccess\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Osanebi.DataAccess\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-02T00:35:49.565Z",
+              "WhenOpened": "2026-06-02T01:16:42.504Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
+              "Title": "Osanebi.DataAccess",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.DataAccess\\Osanebi.DataAccess.csproj",
+              "RelativeDocumentMoniker": "Osanebi.DataAccess\\Osanebi.DataAccess.csproj",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.DataAccess\\Osanebi.DataAccess.csproj",
+              "RelativeToolTip": "Osanebi.DataAccess\\Osanebi.DataAccess.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-02T01:04:30.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Osanebi.Api",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Osanebi.Api.csproj",
+              "RelativeDocumentMoniker": "Osanebi.Api\\Osanebi.Api.csproj",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Api\\Osanebi.Api.csproj",
+              "RelativeToolTip": "Osanebi.Api\\Osanebi.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-02T01:03:00.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.DataAccess\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Osanebi.DataAccess\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.DataAccess\\ApplicationDbContext.cs",
               "RelativeToolTip": "Osanebi.DataAccess\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-02T00:28:00.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Osanebi.Utility",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Utility\\Osanebi.Utility.csproj",
+              "RelativeDocumentMoniker": "Osanebi.Utility\\Osanebi.Utility.csproj",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Utility\\Osanebi.Utility.csproj",
+              "RelativeToolTip": "Osanebi.Utility\\Osanebi.Utility.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-02T00:59:00.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Error.razor",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Pages\\Error.razor",
+              "RelativeDocumentMoniker": "Osanebi.WebBlazor\\Components\\Pages\\Error.razor",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Pages\\Error.razor",
+              "RelativeToolTip": "Osanebi.WebBlazor\\Components\\Pages\\Error.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-02T00:45:29.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Osanebi.WebBlazor\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Osanebi.WebBlazor\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-02T00:44:58.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Program.cs",
+              "RelativeDocumentMoniker": "Osanebi.WebBlazor\\Program.cs",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Program.cs",
+              "RelativeToolTip": "Osanebi.WebBlazor\\Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T00:46:39.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Gender.cs",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Model\\Enums\\Gender.cs",
+              "RelativeDocumentMoniker": "Osanebi.Model\\Enums\\Gender.cs",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Model\\Enums\\Gender.cs",
+              "RelativeToolTip": "Osanebi.Model\\Enums\\Gender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T00:52:17.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "NotFound.razor",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Pages\\NotFound.razor",
+              "RelativeDocumentMoniker": "Osanebi.WebBlazor\\Components\\Pages\\NotFound.razor",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Pages\\NotFound.razor",
+              "RelativeToolTip": "Osanebi.WebBlazor\\Components\\Pages\\NotFound.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-02T00:42:07.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Model\\Identity\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Osanebi.Model\\Identity\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.Model\\Identity\\ApplicationUser.cs",
+              "RelativeToolTip": "Osanebi.Model\\Identity\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T00:28:58.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "Osanebi.WebBlazor\\Components\\Routes.razor",
+              "ToolTip": "C:\\Users\\opone\\Documents\\Dotnet\\Osanebi\\Osanebi.WebBlazor\\Components\\Routes.razor",
+              "RelativeToolTip": "Osanebi.WebBlazor\\Components\\Routes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-02T00:37:29.726Z",
               "EditorCaption": ""
             }
           ]
