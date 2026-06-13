@@ -13,7 +13,6 @@ namespace Osanebi.WebBlazor
             var builder = WebApplication.CreateBuilder(args);
 
             var apiBaseAddress = builder.Configuration["ApiBaseAddress"] ?? "https://localhost:7070/api/";
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(apiBaseAddress) });
 
             // Add services to the container.
             builder.Services.AddRazorComponents()
@@ -22,6 +21,9 @@ namespace Osanebi.WebBlazor
 
             // Register the custom services
             builder.Services.AddMudServices();
+            builder.Services.AddScoped(sp => new HttpClient { 
+                BaseAddress = new Uri(apiBaseAddress)
+            });
 
             var app = builder.Build();
 

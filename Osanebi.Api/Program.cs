@@ -35,7 +35,7 @@ namespace Osanebi.Api
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>( option =>
             {
-                option.SignIn.RequireConfirmedAccount = true;
+                option.SignIn.RequireConfirmedAccount = false;
             })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
