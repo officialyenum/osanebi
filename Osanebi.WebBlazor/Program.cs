@@ -1,4 +1,8 @@
 using Osanebi.WebBlazor.Components;
+using MudBlazor.Services;
+
+
+
 
 namespace Osanebi.WebBlazor
 {
@@ -14,6 +18,10 @@ namespace Osanebi.WebBlazor
             // Add services to the container.
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
+
+
+            // Register the custom services
+            builder.Services.AddMudServices();
 
             var app = builder.Build();
 
