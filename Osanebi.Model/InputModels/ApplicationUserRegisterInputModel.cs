@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Osanebi.Model.InputModels
 {
-    public class ApplicationUserInputModel
+    public class ApplicationUserRegisterInputModel
     {
         [Required]
         public string? FirstName { get; set; }

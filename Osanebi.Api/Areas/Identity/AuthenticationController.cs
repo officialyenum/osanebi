@@ -13,50 +13,50 @@ namespace Osanebi.Api.Areas.Identity
     {
         [HttpPost("login")]
         [DisplayName("Login Endpoint")]
-        public async Task<IActionResult> Login([FromBody] ApplicationUserInputModel model)
+        public async Task<IActionResult> Login([FromBody] ApplicationUserLoginInputModel model)
         {
             var result = await authenticationService.LoginAsync(model);
-            return Ok(result);
+            return result.IsSuccess ? Ok(result) : BadRequest(result);
         }
 
         [HttpPost("register")]
         [DisplayName("Register Endpoint")]
-        public async Task<IActionResult> Register([FromBody] ApplicationUserInputModel model)
+        public async Task<IActionResult> Register([FromBody] ApplicationUserRegisterInputModel model)
         {
             var result = await authenticationService.RegisterAsync(model);
-            return Ok(result);
+            return result ? Ok(result) : StatusCode(500);
         }
 
         [HttpPost("forgot-password")]
         [DisplayName("Forgot Password Endpoint")]
-        public async Task<IActionResult> ForgotPassword([FromBody] ApplicationUserInputModel model)
+        public async Task<IActionResult> ForgotPassword([FromBody] ApplicationUserRegisterInputModel model)
         {
             var result = await authenticationService.ForgotPasswordAsync(model);
-            return Ok(result);
+            return result ? Ok(result) : StatusCode(500);
         }
 
         [HttpPost("reset-password")]
         [DisplayName("Reset Password Endpoint")]
-        public async Task<IActionResult> ResetPassword([FromBody] ApplicationUserInputModel model)
+        public async Task<IActionResult> ResetPassword([FromBody] ApplicationUserRegisterInputModel model)
         {
             var result = await authenticationService.ResetPasswordAsync(model);
-            return Ok(result);
+            return result ? Ok(result) : StatusCode(500);
         }
 
         [HttpPost("change-password")]
         [DisplayName("Change Password Endpoint")]
-        public async Task<IActionResult> ChangePassword([FromBody] ApplicationUserInputModel model)
+        public async Task<IActionResult> ChangePassword([FromBody] ApplicationUserRegisterInputModel model)
         {
             var result = await authenticationService.ChangePasswordAsync(model);
-            return Ok(result);
+            return result ? Ok(result) : StatusCode(500);
         }
 
         [HttpPost("refresh-token")]
         [DisplayName("Refresh Token Endpoint")]
-        public async Task<IActionResult> RefreshToken([FromBody] ApplicationUserInputModel model)
+        public async Task<IActionResult> RefreshToken([FromBody] ApplicationUserRegisterInputModel model)
         {
             var result = await authenticationService.RefreshTokenAsync(model);
-            return Ok(result);
+            return result ? Ok(result) : StatusCode(500);
         }
     }
 }
