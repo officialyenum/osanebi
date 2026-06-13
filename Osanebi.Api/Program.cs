@@ -1,7 +1,10 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 using Osanebi.DataAccess;
-using Osanebi.Model.Identity;
+using Osanebi.Model.IdentityModels;
+using Osanebi.Service;
+using Osanebi.Service.IService;
 using System.Diagnostics;
 
 namespace Osanebi.Api
@@ -29,6 +32,13 @@ namespace Osanebi.Api
                     Description = "An ASP.NET Core Web API for Osanebi application.",
                 });
             });
+
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
+            builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+
 
             var app = builder.Build();
 

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -16,10 +16,6 @@
     <PackageReference Include="NuGet.Protocol" Version="7.6.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.2.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.2.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\Identity\" />
   </ItemGroup>
 
   <ItemGroup>

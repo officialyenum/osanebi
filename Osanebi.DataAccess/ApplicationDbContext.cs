@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Osanebi.Model.Identity;
+using Osanebi.Model.IdentityModels;
 
 namespace Osanebi.DataAccess;
 
