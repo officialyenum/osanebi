@@ -1,5 +1,7 @@
-using Osanebi.WebBlazor.Components;
+using Microsoft.AspNetCore.Localization;
 using MudBlazor.Services;
+using Osanebi.WebBlazor.Components;
+using System.Globalization;
 
 
 
@@ -14,7 +16,35 @@ namespace Osanebi.WebBlazor
 
             var apiBaseAddress = builder.Configuration["ApiBaseAddress"] ?? "https://localhost:7070/api/";
 
+
             // Add services to the container.
+
+            builder.Services.AddLocalization();
+            var supportedCultures = new[]
+            {
+                new CultureInfo("en-US"), // English (United States)
+                new CultureInfo("en-GB"), // English (United Kingdom)
+
+                new CultureInfo("fr-FR"), // French (France)
+                new CultureInfo("de-DE"), // German (Germany)
+                new CultureInfo("nl-NL"), // Dutch (Netherlands)
+
+                new CultureInfo("es-ES"), // Spanish (Spain)
+
+                new CultureInfo("zh-CN"), // Mandarin Chinese (Simplified, China)
+
+                new CultureInfo("ig-NG"), // Igbo (Nigeria)
+                new CultureInfo("yo-NG")  // Yoruba (Nigeria)
+            };
+
+            builder.Services.Configure<RequestLocalizationOptions>(options =>
+            {
+                options.DefaultRequestCulture = new RequestCulture("en-GB");
+
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
+
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
 

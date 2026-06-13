@@ -1,0 +1,74 @@
+﻿@using System.Globalization
+@inject NavigationManager navigationManager
+@inject IJSRuntime jsRuntime
+
+<MudMenu StartIcon="@Icons.Material.Filled.Translate" EndIcon="@Icons.Material.Filled.KeyboardArrowDown" Label="@_selectedCulture" Color="Color.Primary" Variant="Variant.Filled">
+    @foreach (var culture in cultures)
+    {
+        <MudMenuItem OnClick="@(() => ChangeCulture(culture))">@culture</MudMenuItem>
+    }
+</MudMenu>
+
+    @code {
+    string _selectedCulture = "EN";
+    CultureInfo _currentCulture = CultureInfo.CurrentCulture;
+    bool _isInitialized = false;
+
+    CultureInfo[] cultures = new[] {
+        new CultureInfo("en-GB"), // English (United Kingdom)
+        new CultureInfo("nl-NL"), // Dutch (Netherlands)
+        new CultureInfo("zh-CN"), // Mandarin Chinese (Simplified, China)
+        new CultureInfo("ig-NG"), // Igbo (Nigeria)
+    };
+
+    protected override void OnInitialized()
+    {
+        SetLabel(_currentCulture);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && !_isInitialized)
+        {
+            _isInitialized = true;
+            var storedCulture = await jsRuntime.InvokeAsync<string>("localStorage.getItem", "culture");
+
+            if (!string.IsNullOrEmpty(storedCulture) && !storedCulture.Equals(_currentCulture.Name, StringComparison.OrdinalIgnoreCase))
+            {
+                var cultureInfo = new CultureInfo(storedCulture);
+                ApplyCulture(cultureInfo);
+                navigationManager.NavigateTo(navigationManager.Uri, forceLoad: true);
+
+            }
+            else
+            {
+                SetLabel(_currentCulture);
+            }
+        }
+    }
+
+    private async Task ChangeCulture(CultureInfo culture)
+    {
+        if (_currentCulture.Name != culture.Name)
+        {
+            _currentCulture = culture;
+            await jsRuntime.InvokeVoidAsync("localStorage.setItem", "culture", culture.Name);
+
+            ApplyCulture(_currentCulture);
+            navigationManager.NavigateTo(navigationManager.Uri, forceLoad: true);
+        }
+    }
+
+    private void ApplyCulture(CultureInfo culture)
+    {
+        CultureInfo.DefaultThreadCurrentCulture = culture;
+        CultureInfo.DefaultThreadCurrentUICulture = culture;
+        SetLabel(culture);
+    }
+
+    private void SetLabel(CultureInfo culture)
+    {
+        _selectedCulture = culture.TwoLetterISOLanguageName.ToUpper();
+        StateHasChanged();
+    }
+}
