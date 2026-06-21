@@ -61,6 +61,15 @@ namespace Osanebi.WebBlazor.LocalizationResource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Activate.
+        /// </summary>
+        public static string btn_activate {
+            get {
+                return ResourceManager.GetString("btn-activate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         public static string btn_login {
@@ -84,6 +93,15 @@ namespace Osanebi.WebBlazor.LocalizationResource {
         public static string btn_reset {
             get {
                 return ResourceManager.GetString("btn-reset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verify.
+        /// </summary>
+        public static string btn_verify {
+            get {
+                return ResourceManager.GetString("btn-verify", resourceCulture);
             }
         }
         
@@ -205,6 +223,15 @@ namespace Osanebi.WebBlazor.LocalizationResource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email already Confirmed.
+        /// </summary>
+        public static string message_email_already_confirmed {
+            get {
+                return ResourceManager.GetString("message-email-already-confirmed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Email already exists.
         /// </summary>
         public static string message_email_exists {
@@ -228,6 +255,24 @@ namespace Osanebi.WebBlazor.LocalizationResource {
         public static string message_email_required {
             get {
                 return ResourceManager.GetString("message-email-required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to Save Verification Code.
+        /// </summary>
+        public static string message_email_verification_code_save_failed {
+            get {
+                return ResourceManager.GetString("message-email-verification-code-save-failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verification code sent Successfully.
+        /// </summary>
+        public static string message_email_verification_code_sent_successfully {
+            get {
+                return ResourceManager.GetString("message-email-verification-code-sent-successfully", resourceCulture);
             }
         }
         
@@ -331,6 +376,15 @@ namespace Osanebi.WebBlazor.LocalizationResource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to User not found.
+        /// </summary>
+        public static string message_user_not_found {
+            get {
+                return ResourceManager.GetString("message-user-not-found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hello Welcome to Osanebi.
         /// </summary>
         public static string message_welcome {
@@ -345,6 +399,15 @@ namespace Osanebi.WebBlazor.LocalizationResource {
         public static string title_about {
             get {
                 return ResourceManager.GetString("title-about", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Profile.
+        /// </summary>
+        public static string title_confirm_email {
+            get {
+                return ResourceManager.GetString("title-confirm-email", resourceCulture);
             }
         }
         

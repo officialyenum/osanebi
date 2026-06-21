@@ -30,29 +30,27 @@
                         Required="true"
                         RequiredError="@localizer["message-password-required"]" />
 
-                      <div>
-
+                    <div class="d-flex align-center justify-space-between mt-4">
                         <MudSpacer/>
-                            <MudButton Variant="Variant.Outlined" Color="Color.Primary" DropShadow="false" OnClick="@(() => {_form.ResetAsync(); _form.ResetValidationAsync();})" Class="mx-2">@localizer["btn-reset"]</MudButton>
-                            <MudButton Variant="Variant.Filled" Color="Color.Secondary" Disabled="@(!_success)" Class="ml-auto" OnClick="@(async () => await HandleValidSubmit())">@localizer["btn-login"]</MudButton>
-                      </div>
+                        <MudButton Variant="Variant.Outlined" Color="Color.Primary" DropShadow="false" OnClick="@(() => {_form.ResetAsync(); _form.ResetValidationAsync();})" Class="mx-2">@localizer["btn-reset"]</MudButton>
+                        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Disabled="@(!_success)" Class="ml-auto" OnClick="@(async () => await HandleValidSubmit())">@localizer["btn-login"]</MudButton>
+                    </div>
+                    <div class="d-flex align-center justify-space-between mt-4">
+
+                        <MudSpacer />
+                        <MudButton Variant="Variant.Text" Color="Color.Primary" Href="/identity/confirm-email">@localizer["link-confirm-email"]</MudButton>
+                        <MudButton Variant="Variant.Text" Color="Color.Primary" Href="/identity/forget-password">@localizer["link-forget-password"]</MudButton>
+                        <MudSpacer />
+                    </div>
                 </MudForm>
             </MudPaper>
         </MudItem>
         
         <MudItem xs="12" sm="5">
-            <MudPaper Class="pa-4 mud-height-full">
-                <MudText Typo="Typo.subtitle2">@localizer["label-errors"] (@_errors.Length)")</MudText>
-                @foreach (var error in _errors)
-                {
-                    <MudText Color="@Color.Error">@error</MudText>
-                }
-            </MudPaper>
+            <ErrorDisplay Errors="@_errors" />
         </MudItem>
     </MudGrid>
-    <MudOverlay Visible="@_loading" LightBackground="true" Absolute="true">
-        <MudProgressCircular Indeterminate="true" Color="Color.Secondary" />
-    </MudOverlay>
+    <LoadingSpinner Loading="@_loading" />
 </MudPaper>
 
 @code {

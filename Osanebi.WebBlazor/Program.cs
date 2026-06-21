@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Localization;
 using MudBlazor.Services;
 using Osanebi.WebBlazor.Components;
+using Osanebi.WebBlazor.Service;
 using System.Globalization;
 
 
@@ -55,6 +56,8 @@ namespace Osanebi.WebBlazor
             {
                 BaseAddress = new Uri(apiBaseAddress)
             });
+            builder.Services.AddScoped<IFileService, FileService>();
+            builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 
             var app = builder.Build();
 

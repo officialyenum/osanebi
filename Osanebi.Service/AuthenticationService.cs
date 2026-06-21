@@ -1,14 +1,21 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using MimeKit;
 using Osanebi.Model.ApplicationModels;
 using Osanebi.Model.IdentityModels;
 using Osanebi.Model.InputModels;
 using Osanebi.Service.IService;
+using Osanebi.Utility;
+using Osanebi.Utility.Utility;
+using System.Net.Mail;
+using System.Net.Mime;
 
 namespace Osanebi.Service
 {
     public class AuthenticationService(
         UserManager<ApplicationUser> userManager,
-        SignInManager<ApplicationUser> signInManager) : IAuthenticationService
+        SignInManager<ApplicationUser> signInManager,
+        IApplicationEmailSender applicationEmailSender
+        ) : IAuthenticationService
     {
         public Task<bool> ChangePasswordAsync(ApplicationUserRegisterInputModel model)
         {
@@ -85,9 +92,122 @@ namespace Osanebi.Service
 
         }
 
+        public async Task<ResponseModel<bool>> ConfirmEmailAsync(ApplicationUserConfirmEmailInputModel model)
+        {
+
+            ArgumentNullException.ThrowIfNull(model.Email);
+
+            var user = await userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                return new ResponseModel<bool>
+                {
+                    IsSuccess = false,
+                    Message = "User not found",
+                    Data = false
+                };
+            }
+
+            if (user.EmailConfirmed)
+            {
+                return new ResponseModel<bool>
+                {
+                    IsSuccess = false,
+                    Message = "Email already Confirmed",
+                    Data = false
+                };
+            }
+            user.VerificationCode = GenerateVerificationCode();
+            var result = await userManager.UpdateAsync(user);
+
+            if (!result.Succeeded)
+            {
+                return new ResponseModel<bool>
+                {
+                    IsSuccess = false,
+                    Message = "Failed to Save Verification Code"
+                };
+            }
+
+            //send email with verification code
+            model.Code = user.VerificationCode.ToString();
+            model.FullName = $"{user.FirstName} {user.LastName}";
+            await SendVerificationEmailAsync(model);
+            return new ResponseModel<bool>
+            {
+                IsSuccess = true,
+                Message = "Verification code sent Successfully",
+            };
+        }
+
+        public async Task<ResponseModel<bool>> ConfirmEmailVerifyCodeAsync(ApplicationUserConfirmEmailInputModel model)
+        {
+            var user = await userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                return new ResponseModel<bool>
+                {
+                    IsSuccess = false,
+                    Message = "User not found"
+                };
+            }
+
+            model.FullName = $"{user.FirstName} {user.LastName}";
+            bool isCodeValid = user.VerificationCode != null && user.VerificationCode.ToString() == model.Code;
+            if (isCodeValid)
+            {
+                user.EmailConfirmed = true;
+                user.Activity = true;
+                var result = await userManager.UpdateAsync(user);
+                return new ResponseModel<bool>
+                {
+                    IsSuccess = result.Succeeded,
+                    Message = result.Succeeded ? "Email confirmed successfully" : "Email Confirmation failed",
+                    Data = true
+                };
+            }
+            else
+            {
+                return new ResponseModel<bool>
+                {
+                    IsSuccess = false,
+                    Message = "Invalid Confirmation Code",
+                    Data = true
+                };
+            }
+        }
         public Task<bool> ResetPasswordAsync(ApplicationUserRegisterInputModel model)
         {
             throw new NotImplementedException();
+        }
+
+        private short GenerateVerificationCode()
+        {
+            Random random = new Random();
+            return (short)random.Next(1000, 9999);
+        }
+
+        private async Task SendVerificationEmailAsync(ApplicationUserConfirmEmailInputModel model)
+        {
+            MimeMessage mail = new ();
+            mail.To.Add(new MailboxAddress(model.FullName, model.Email));
+            mail.Subject = "Osanebi - Email Confirmation";
+            var emailContent = model.EmailTemplate.Replace("{FullName}", model.FullName)
+                                         .Replace("{VerificationCode}", model.Code ?? string.Empty);
+            mail.Body = new TextPart("html")
+            {
+                Text = emailContent
+            };
+
+            try
+            {
+                await applicationEmailSender.SendEmailAsync(mail);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error while sending email: " + ex);
+            }
+
         }
     }
 }

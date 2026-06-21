@@ -126,6 +126,10 @@
   <data name="title-user-profile" xml:space="preserve">
     <value>用户资料</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="title-confirm-email" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="btn-login" xml:space="preserve">
     <value>登录</value>
   </data>
@@ -137,6 +141,12 @@
   </data>
   <data name="btn-reset" xml:space="preserve">
     <value>重置</value>
+  </data>
+  <data name="btn-verify" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btn-activate" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="btn-register" xml:space="preserve">
     <value>登记</value>
@@ -203,6 +213,18 @@
   </data>
   <data name="message-user-locked-out" xml:space="preserve">
     <value>用户已被锁定</value>
+  </data>
+  <data name="message-user-not-found" xml:space="preserve">
+    <value>&#x8;</value>
+  </data>
+  <data name="message-email-already-confirmed" xml:space="preserve">
+    <value>&#x8;</value>
+  </data>
+  <data name="message-email-verification-code-sent-successfully" xml:space="preserve">
+    <value>&#x8;</value>
+  </data>
+  <data name="message-email-verification-code-save-failed" xml:space="preserve">
+    <value>&#x8;</value>
   </data>
   <data name="message-password-validation" xml:space="preserve">
     <value>密码必须至少包含 8 个字符</value>

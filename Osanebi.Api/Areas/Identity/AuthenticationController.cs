@@ -27,6 +27,22 @@ namespace Osanebi.Api.Areas.Identity
             return result.IsSuccess ? Ok() : BadRequest(result);
         }
 
+        [HttpPost("confirm-email")]
+        [DisplayName("Confirm Email")]
+        public async Task<IActionResult> ConfirmEmail([FromBody] ApplicationUserConfirmEmailInputModel model)
+        {
+            var result = await authenticationService.ConfirmEmailAsync(model);
+            return result.IsSuccess ? Ok() : BadRequest(result);
+        }
+
+        [HttpPost("confirm-email-verify-code")]
+        [DisplayName("Confirm Email Verify Code")]
+        public async Task<IActionResult> ConfirmEmailVerifyCode([FromBody] ApplicationUserConfirmEmailInputModel model)
+        {
+            var result = await authenticationService.ConfirmEmailVerifyCodeAsync(model);
+            return result.IsSuccess ? Ok() : BadRequest(result);
+        }
+
         [HttpPost("forgot-password")]
         [DisplayName("Forgot Password Endpoint")]
         public async Task<IActionResult> ForgotPassword([FromBody] ApplicationUserRegisterInputModel model)

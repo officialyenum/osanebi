@@ -126,6 +126,10 @@
   <data name="title-user-profile" xml:space="preserve">
     <value>Profaịlụ onye ọrụ</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="title-confirm-email" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="btn-login" xml:space="preserve">
     <value>Nbanye</value>
   </data>
@@ -137,6 +141,12 @@
   </data>
   <data name="btn-reset" xml:space="preserve">
     <value>Tọgharia</value>
+  </data>
+  <data name="btn-verify" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btn-activate" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="btn-register" xml:space="preserve">
     <value>Debanye aha</value>
@@ -205,6 +215,18 @@ Achọrọ nyocha ihe abụọ</value>
   <data name="message-user-locked-out" xml:space="preserve">
     <value>
 Akpọchiela onye ọrụ</value>
+  </data>
+  <data name="message-user-not-found" xml:space="preserve">
+    <value>&#x8;</value>
+  </data>
+  <data name="message-email-already-confirmed" xml:space="preserve">
+    <value>&#x8;</value>
+  </data>
+  <data name="message-email-verification-code-sent-successfully" xml:space="preserve">
+    <value>&#x8;</value>
+  </data>
+  <data name="message-email-verification-code-save-failed" xml:space="preserve">
+    <value>&#x8;</value>
   </data>
   <data name="message-password-validation" xml:space="preserve">
     <value>

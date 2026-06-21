@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
+using MimeKit;
+using MailKit.Net.Smtp;
 using Osanebi.Utility.Utility;
-using System.Net.Mail;
 
 namespace Osanebi.Utility
 {
@@ -8,15 +9,19 @@ namespace Osanebi.Utility
     {
         private readonly EmailConfiguration _emailConfiguration = emailConfiguration.Value;
 
-        public Task SendEmailAsync(MailMessage message)
+        public async Task SendEmailAsync(MimeMessage message)
         {
-            message.From = new MailAddress(_emailConfiguration.FromEmail, _emailConfiguration.FromName);
-            SmtpClient smtpClient = new SmtpClient(_emailConfiguration.SmtpServer, _emailConfiguration.Port)
-            {
-                Credentials = new System.Net.NetworkCredential(_emailConfiguration.Username, _emailConfiguration.Password),
-                EnableSsl = true
-            };
-            return smtpClient.SendMailAsync(message);
+            message.From.Add(
+                new MailboxAddress(_emailConfiguration.FromName, _emailConfiguration.FromEmail));
+            using var client = new SmtpClient();
+            await client.ConnectAsync(_emailConfiguration.SmtpServer, _emailConfiguration.Port, true);
+            await client.AuthenticateAsync(
+                    _emailConfiguration.Username,
+                    _emailConfiguration.Password);
+
+            await client.SendAsync(message);
+
+            await client.DisconnectAsync(true);
         }
     }
 }

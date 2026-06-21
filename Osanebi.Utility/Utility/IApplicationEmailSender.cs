@@ -1,9 +1,9 @@
-﻿using System.Net.Mail;
+﻿using MimeKit;
 
 namespace Osanebi.Utility.Utility
 {
     public interface IApplicationEmailSender
     {
-        Task SendEmailAsync(MailMessage message);
+        Task SendEmailAsync(MimeMessage message);
     }
 }

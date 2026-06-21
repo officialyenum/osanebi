@@ -126,6 +126,9 @@
   <data name="title-user-profile" xml:space="preserve">
     <value>User Profile</value>
   </data>
+  <data name="title-confirm-email" xml:space="preserve">
+    <value>Confirm Email</value>
+  </data>
   <data name="btn-login" xml:space="preserve">
     <value>Login</value>
   </data>
@@ -137,6 +140,12 @@
   </data>
   <data name="btn-reset" xml:space="preserve">
     <value>Reset</value>
+  </data>
+  <data name="btn-verify" xml:space="preserve">
+    <value>Verify</value>
+  </data>
+  <data name="btn-activate" xml:space="preserve">
+    <value>Activate</value>
   </data>
   <data name="btn-register" xml:space="preserve">
     <value>Register</value>
@@ -200,6 +209,18 @@
   </data>
   <data name="message-user-locked-out" xml:space="preserve">
     <value>User is Locked out</value>
+  </data>
+  <data name="message-user-not-found" xml:space="preserve">
+    <value>User not found</value>
+  </data>
+  <data name="message-email-already-confirmed" xml:space="preserve">
+    <value>User not found</value>
+  </data>
+  <data name="message-email-verification-code-sent-successfully" xml:space="preserve">
+    <value>Verification code sent Successfully</value>
+  </data>
+  <data name="message-email-verification-code-save-failed" xml:space="preserve">
+    <value>Failed to Save Verification Code</value>
   </data>
   <data name="message-password-validation" xml:space="preserve">
     <value>Password must contain at least 8 characters</value>

@@ -1,0 +1,103 @@
+﻿@page "/identity/confirm-email"
+
+@inject HttpClient http
+@inject IStringLocalizer<Resource> localizer
+@inject NavigationManager navigationManager
+@inject IFileService fileService
+@inject IAuthenticationService authenticationService
+
+<MudPaper Style="position:relative" , Class="pa-4" Outlined="false" Square="false" Elevation="0">
+    <MudText Typo="Typo.h3">@localizer["title-confirm-email"]</MudText>
+    <MudGrid>
+        <MudItem xs="12" sm="7">
+            <MudPaper Class="pa-4">
+                <MudForm @ref="_form" @bind-IsValid="@_success" @bind-Errors="@_errors" Model="@_model" Disabled="@_loading">
+                    <MudTextField T="string" Label=@localizer["input-email"]
+                                  @bind-Value="_model.Email"
+                                  Validation="@(new EmailOnlyAttribute { ErrorMessage = @localizer["message-email-format"] })"
+                                  Required="true"
+                                  RequiredError="@localizer["message-email-required"]"
+                                  Disabled="@insertCodeEnabled"
+                                  />
+                    <div class="@(insertCodeEnabled ? "d-block" : "d-none") mt-4">
+                        <MudTextField T="string"
+                                        Label=@localizer["input-verification-code"]
+                                        @bind-Value="_model.Code"
+                                      Validation="@(insertCodeEnabled ? new CodeAttribute { ErrorMessage = @localizer["message-code-four-digit"] } : null)"
+                                        Required="@(insertCodeEnabled)"
+                                        RequiredError="@localizer["message-verification-code-required"]"
+                                        Class="mt-4" />
+                        <MudText Typo="Typo.subtitle2">@localizer["info-verify-code-sent"]</MudText>"
+                    </div>
+                    <div class="d-flex align-center justify-space-between mt-4">
+
+                        <MudSpacer />
+                        <MudButton Variant="Variant.Outlined" Color="Color.Primary" DropShadow="false" OnClick="@ResetForm" Class="mx-2">@localizer["btn-reset"]</MudButton>
+                        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Disabled="@(!_success)" Class="ml-auto" OnClick="@SubmitForm">
+                            @(insertCodeEnabled ? localizer["btn-verify"] : localizer["btn-send-verification-code"]))
+                        </MudButton>
+                    </div>
+                </MudForm>
+            </MudPaper>
+        </MudItem>
+
+        <MudItem xs="12" sm="5">
+            <ErrorDisplay Errors="@_errors" />
+        </MudItem>
+    </MudGrid>
+    <LoadingSpinner Loading="@_loading" />
+</MudPaper>
+
+@code {
+    bool _success;
+    string[] _errors = Array.Empty<string>();
+    bool _loading = false;
+    bool insertCodeEnabled = false;
+    MudForm _form = new();
+    ApplicationUserConfirmEmailInputModel _model = new() { Email = "", EmailTemplate = ""};
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            
+            var templatePath = Path.Combine(Directory.GetCurrentDirectory(), $"Templates/ConfirmEmailTemplate.{CultureInfo.CurrentCulture.Name}.html");
+            _model.EmailTemplate = await fileService.ReadFileAsync($"Templates/ConfirmEmailTemplate.{ CultureInfo.CurrentCulture.Name}.html");
+        }
+        catch (Exception)
+        {
+            _model.EmailTemplate = localizer["email-template-raw-text"];
+        }
+    }
+
+    private async Task SubmitForm()
+    {
+        _loading = true;
+        var response = insertCodeEnabled 
+            ? await authenticationService.VerifyEmailCodeAsync(_model)
+            : await authenticationService.ConfirmEmailAsync(_model);
+        _loading = false;
+        if (response.IsSuccess)
+        {
+            if (insertCodeEnabled)
+            {
+                navigationManager.NavigateTo("Identity/login");
+            } else
+            {
+                insertCodeEnabled = true;
+            }
+        }
+        else
+        {
+            _errors = new string[] { response.Message ?? string.Empty };
+        }
+    }
+
+    private async Task ResetForm()
+    {
+        await _form.ResetAsync();
+        await _form.ResetValidationAsync();
+        _errors = Array.Empty<string>();
+        insertCodeEnabled = false;
+    }
+}
