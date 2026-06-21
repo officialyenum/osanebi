@@ -5,6 +5,8 @@ using Osanebi.DataAccess;
 using Osanebi.Model.IdentityModels;
 using Osanebi.Service;
 using Osanebi.Service.IService;
+using Osanebi.Utility;
+using Osanebi.Utility.Utility;
 using System.Diagnostics;
 
 namespace Osanebi.Api
@@ -33,7 +35,7 @@ namespace Osanebi.Api
                 });
             });
 
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>( option =>
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(option =>
             {
                 option.SignIn.RequireConfirmedAccount = false;
             })
@@ -41,6 +43,8 @@ namespace Osanebi.Api
                 .AddDefaultTokenProviders();
 
             builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+            builder.Services.Configure<EmailConfiguration>(builder.Configuration.GetSection("EmailConfiguration"));
+            builder.Services.AddSingleton<IApplicationEmailSender, ApplicationEmailSender>();
 
 
             var app = builder.Build();

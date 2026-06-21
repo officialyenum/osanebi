@@ -16,7 +16,7 @@ namespace Osanebi.Api.Areas.Identity
         public async Task<IActionResult> Login([FromBody] ApplicationUserLoginInputModel model)
         {
             var result = await authenticationService.LoginAsync(model);
-            return result.IsSuccess ? Ok(result) : BadRequest(result);
+            return result.IsSuccess ? Ok() : BadRequest(result);
         }
 
         [HttpPost("register")]
@@ -24,7 +24,7 @@ namespace Osanebi.Api.Areas.Identity
         public async Task<IActionResult> Register([FromBody] ApplicationUserRegisterInputModel model)
         {
             var result = await authenticationService.RegisterAsync(model);
-            return result ? Ok(result) : StatusCode(500);
+            return result.IsSuccess ? Ok() : BadRequest(result);
         }
 
         [HttpPost("forgot-password")]

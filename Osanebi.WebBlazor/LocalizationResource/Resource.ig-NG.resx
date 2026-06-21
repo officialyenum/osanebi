@@ -117,7 +117,120 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="title-register" xml:space="preserve">
+    <value>Debanye aha</value>
+  </data>
+  <data name="title-about" xml:space="preserve">
+    <value>Ihe gbasara</value>
+  </data>
+  <data name="title-user-profile" xml:space="preserve">
+    <value>Profaịlụ onye ọrụ</value>
+  </data>
+  <data name="btn-login" xml:space="preserve">
+    <value>Nbanye</value>
+  </data>
+  <data name="title-login" xml:space="preserve">
+    <value>Nbanye</value>
+  </data>
   <data name="message-welcome" xml:space="preserve">
     <value>Ndewo nu Osanebi</value>
+  </data>
+  <data name="btn-reset" xml:space="preserve">
+    <value>Tọgharia</value>
+  </data>
+  <data name="btn-register" xml:space="preserve">
+    <value>Debanye aha</value>
+  </data>
+  <data name="message-invalid-login" xml:space="preserve">
+    <value>
+Mgbalị ịbanye na ezighi ezi.</value>
+  </data>
+  <data name="message-invalid-user-data" xml:space="preserve">
+    <value>Data onye ọrụ ezighi ezi.</value>
+  </data>
+  <data name="gender-Female" xml:space="preserve">
+    <value>Nwanyị</value>
+  </data>
+  <data name="input-gender" xml:space="preserve">
+    <value>okike</value>
+  </data>
+  <data name="gender-Other" xml:space="preserve">
+    <value>Ndị ọzọ</value>
+  </data>
+  <data name="gender-Male" xml:space="preserve">
+    <value>Nwoke</value>
+  </data>
+  <data name="input-confirm-password" xml:space="preserve">
+    <value>Kwenye Na Okwuntughe</value>
+  </data>
+  <data name="input-dob" xml:space="preserve">
+    <value>Ụbọchị ọmụmụ</value>
+  </data>
+  <data name="input-email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="input-firstname" xml:space="preserve">
+    <value>Aha mbụ</value>
+  </data>
+  <data name="input-lastname" xml:space="preserve">
+    <value>Aha ikpeazụ</value>
+  </data>
+  <data name="input-password" xml:space="preserve">
+    <value>Okwuntughe</value>
+  </data>
+  <data name="label-errors" xml:space="preserve">
+    <value>Njehie</value>
+  </data>
+  <data name="message-confirm-password-match" xml:space="preserve">
+    <value>Okwuntughe adabaghị</value>
+  </data>
+  <data name="message-confirm-password-required" xml:space="preserve">
+    <value>Kwenye paswọọdụ achọrọ!</value>
+  </data>
+  <data name="message-password-required" xml:space="preserve">
+    <value>
+Achọrọ paswọọdụ</value>
+  </data>
+  <data name="message-password-weak" xml:space="preserve">
+    <value>
+Okwuntughe adịghị ike!</value>
+  </data>
+  <data name="message-two-factor-required" xml:space="preserve">
+    <value>
+Achọrọ nyocha ihe abụọ</value>
+  </data>
+  <data name="message-unknown-error" xml:space="preserve">
+    <value>Njehie amaghị ama mere</value>
+  </data>
+  <data name="message-user-locked-out" xml:space="preserve">
+    <value>
+Akpọchiela onye ọrụ</value>
+  </data>
+  <data name="message-password-validation" xml:space="preserve">
+    <value>
+Okwuntughe ga-enwerịrị opekata mpe mkpụrụedemede 8</value>
+  </data>
+  <data name="message-email-exists" xml:space="preserve">
+    <value>Email adịlarị</value>
+  </data>
+  <data name="message-email-format" xml:space="preserve">
+    <value>
+Usoro email adịghị mma</value>
+  </data>
+  <data name="message-email-required" xml:space="preserve">
+    <value>
+Achọrọ email!</value>
+  </data>
+  <data name="message-firstname-required" xml:space="preserve">
+    <value>
+Achọrọ aha mbụ!</value>
+  </data>
+  <data name="message-lastname-required" xml:space="preserve">
+    <value>
+Achọrọ aha ikpeazụ!</value>
+  </data>
+  <data name="message-login-not-allowed" xml:space="preserve">
+    <value>
+Anaghị anabata nbanye</value>
   </data>
 </root>

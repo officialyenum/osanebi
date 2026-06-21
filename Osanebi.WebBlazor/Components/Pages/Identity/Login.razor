@@ -1,0 +1,105 @@
+﻿@page "/identity/login"
+
+@using Osanebi.Model.ApplicationModels
+@using Osanebi.Model.InputModels
+@using Osanebi.WebBlazor.Validator
+
+@inject HttpClient http
+@inject IStringLocalizer<Resource> localizer
+@inject NavigationManager navigationManager
+@inject IJSRuntime jsRuntime
+
+<MudPaper Style="position:relative", Class="pa-4" Outlined="false" Square="false" Elevation="0">
+    <MudText Typo="Typo.h3">@localizer["title-login"]</MudText>
+    <MudGrid>
+        <MudItem xs="12" sm="7">
+            <MudPaper Class="pa-4">
+                <MudForm @ref="_form" @bind-IsValid="@_success" @bind-Errors="@_errors" Model="@_model" Disabled="@_loading">
+                    <MudTextField T="string"
+                        Label=@localizer["input-email"] 
+                        @bind-Value="_model.Email" 
+                        Required="true" 
+                        RequiredError="@localizer["message-email-required"]"
+                        Validation="@(new EmailOnlyAttribute { ErrorMessage = @localizer["message-email-format"] })" />
+                    <MudTextField T="string"
+                        @bind-Value="_model.Password"
+                        Label=@localizer["input-password"]
+                        HelperText="Choose a strong password"
+                        InputType="InputType.Password"
+                        Validation="@(new PasswordAttribute() { ErrorMessage = @localizer["message-password-validation"] })"
+                        Required="true"
+                        RequiredError="@localizer["message-password-required"]" />
+
+                      <div>
+
+                        <MudSpacer/>
+                            <MudButton Variant="Variant.Outlined" Color="Color.Primary" DropShadow="false" OnClick="@(() => {_form.ResetAsync(); _form.ResetValidationAsync();})" Class="mx-2">@localizer["btn-reset"]</MudButton>
+                            <MudButton Variant="Variant.Filled" Color="Color.Secondary" Disabled="@(!_success)" Class="ml-auto" OnClick="@(async () => await HandleValidSubmit())">@localizer["btn-login"]</MudButton>
+                      </div>
+                </MudForm>
+            </MudPaper>
+        </MudItem>
+        
+        <MudItem xs="12" sm="5">
+            <MudPaper Class="pa-4 mud-height-full">
+                <MudText Typo="Typo.subtitle2">@localizer["label-errors"] (@_errors.Length)")</MudText>
+                @foreach (var error in _errors)
+                {
+                    <MudText Color="@Color.Error">@error</MudText>
+                }
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+    <MudOverlay Visible="@_loading" LightBackground="true" Absolute="true">
+        <MudProgressCircular Indeterminate="true" Color="Color.Secondary" />
+    </MudOverlay>
+</MudPaper>
+
+@code {
+    bool _success;
+    bool _loading = false;
+    string[] _errors = [];
+    MudForm _form = new();
+    ApplicationUserLoginInputModel _model = new ApplicationUserLoginInputModel { Email = "", Password = "" };
+
+    private async Task HandleValidSubmit()
+    {
+        ChangeLoadingState();
+        var response = await http.PostAsJsonAsync("Identity/Authentication/Login", _model);
+        ChangeLoadingState();
+        if (response.IsSuccessStatusCode)
+        {
+            navigationManager.NavigateTo("Identity/UserProfile");
+        }
+        else
+        {
+            var errorResponse = await response.Content.ReadFromJsonAsync<ResponseModel<bool>>();
+            var localizedErrorMessage = GetLocalizedErrorMessage(errorResponse?.Message);
+            _errors = new string[] { localizedErrorMessage };
+        }
+
+        void ChangeLoadingState()
+        {
+            _loading = !_loading;
+            StateHasChanged();
+        }
+
+        string GetLocalizedErrorMessage(string errorMessage)
+        {
+            var resourceKey = GetResourceKeyForApiMessage(errorMessage);
+            return localizer[resourceKey];
+        }
+
+        string GetResourceKeyForApiMessage(string errorMessage)
+        {
+            return errorMessage switch
+            {
+                "User is locked out." => "message-user-locked-out",
+                "Login is not allowed." => "message-login-not-allowed",
+                "Two-factor authentication is required." => "message-two-factor-required",
+                "Invalid login attempt." => "message-invalid-login",
+                _ => "message-login-failed"
+            };
+        }
+    }
+}

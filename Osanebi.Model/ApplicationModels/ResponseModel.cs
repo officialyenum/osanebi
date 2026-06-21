@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Osanebi.Model.ApplicationModels
+﻿namespace Osanebi.Model.ApplicationModels
 {
     public class ResponseModel<T>
     {

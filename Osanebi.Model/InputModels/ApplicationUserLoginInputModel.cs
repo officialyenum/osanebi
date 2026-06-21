@@ -4,7 +4,7 @@ namespace Osanebi.Model.InputModels
 {
     public class ApplicationUserLoginInputModel
     {
-        
+
         [Required]
         [EmailAddress]
         public string? Email { get; set; }

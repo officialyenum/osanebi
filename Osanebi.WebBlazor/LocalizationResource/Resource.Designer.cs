@@ -90,27 +90,27 @@ namespace Osanebi.WebBlazor.LocalizationResource {
         /// <summary>
         ///   Looks up a localized string similar to Female.
         /// </summary>
-        public static string gender_female {
+        public static string gender_Female {
             get {
-                return ResourceManager.GetString("gender-female", resourceCulture);
+                return ResourceManager.GetString("gender-Female", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Male.
         /// </summary>
-        public static string gender_male {
+        public static string gender_Male {
             get {
-                return ResourceManager.GetString("gender-male", resourceCulture);
+                return ResourceManager.GetString("gender-Male", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Other.
         /// </summary>
-        public static string gender_other {
+        public static string gender_Other {
             get {
-                return ResourceManager.GetString("gender-other", resourceCulture);
+                return ResourceManager.GetString("gender-Other", resourceCulture);
             }
         }
         
@@ -147,6 +147,15 @@ namespace Osanebi.WebBlazor.LocalizationResource {
         public static string input_firstname {
             get {
                 return ResourceManager.GetString("input-firstname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female.
+        /// </summary>
+        public static string input_gender {
+            get {
+                return ResourceManager.GetString("input-gender", resourceCulture);
             }
         }
         
@@ -327,6 +336,42 @@ namespace Osanebi.WebBlazor.LocalizationResource {
         public static string message_welcome {
             get {
                 return ResourceManager.GetString("message-welcome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About.
+        /// </summary>
+        public static string title_about {
+            get {
+                return ResourceManager.GetString("title-about", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        public static string title_login {
+            get {
+                return ResourceManager.GetString("title-login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        public static string title_register {
+            get {
+                return ResourceManager.GetString("title-register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Profile.
+        /// </summary>
+        public static string title_user_profile {
+            get {
+                return ResourceManager.GetString("title-user-profile", resourceCulture);
             }
         }
     }

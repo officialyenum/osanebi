@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 
-namespace Osanebi.WebBlazor.Components.Validator
+namespace Osanebi.WebBlazor.Validator
 {
     public class CodeAttribute : ValidationAttribute
     {

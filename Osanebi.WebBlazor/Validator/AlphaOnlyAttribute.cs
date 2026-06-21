@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 
-namespace Osanebi.WebBlazor.Components.Validator
+namespace Osanebi.WebBlazor.Validator
 {
     public class AlphaOnlyAttribute : ValidationAttribute
     {
@@ -15,7 +15,6 @@ namespace Osanebi.WebBlazor.Components.Validator
                 ? ValidationResult.Success
                 : new ValidationResult(ErrorMessage ??
                     "Alpha Only Allowed");
-
         }
     }
 }

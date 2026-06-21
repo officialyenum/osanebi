@@ -117,7 +117,112 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="title-register" xml:space="preserve">
+    <value>登记</value>
+  </data>
+  <data name="title-about" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="title-user-profile" xml:space="preserve">
+    <value>用户资料</value>
+  </data>
+  <data name="btn-login" xml:space="preserve">
+    <value>登录</value>
+  </data>
+  <data name="title-login" xml:space="preserve">
+    <value>登录</value>
+  </data>
   <data name="message-welcome" xml:space="preserve">
     <value>您好，欢迎来到奥萨内比</value>
+  </data>
+  <data name="btn-reset" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="btn-register" xml:space="preserve">
+    <value>登记</value>
+  </data>
+  <data name="message-invalid-login" xml:space="preserve">
+    <value>登录尝试无效。</value>
+  </data>
+  <data name="message-invalid-user-data" xml:space="preserve">
+    <value>
+用户数据无效。</value>
+  </data>
+  <data name="gender-Female" xml:space="preserve">
+    <value>女性</value>
+  </data>
+  <data name="input-gender" xml:space="preserve">
+    <value>
+性别</value>
+  </data>
+  <data name="gender-Other" xml:space="preserve">
+    <value>其他</value>
+  </data>
+  <data name="gender-Male" xml:space="preserve">
+    <value>男性</value>
+  </data>
+  <data name="input-confirm-password" xml:space="preserve">
+    <value>确认密码</value>
+  </data>
+  <data name="input-dob" xml:space="preserve">
+    <value>出生日期</value>
+  </data>
+  <data name="input-email" xml:space="preserve">
+    <value>电子邮件</value>
+  </data>
+  <data name="input-firstname" xml:space="preserve">
+    <value>
+名</value>
+  </data>
+  <data name="input-lastname" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="input-password" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="label-errors" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="message-confirm-password-match" xml:space="preserve">
+    <value>密码不匹配</value>
+  </data>
+  <data name="message-confirm-password-required" xml:space="preserve">
+    <value>需要确认密码！</value>
+  </data>
+  <data name="message-password-required" xml:space="preserve">
+    <value>需要密码！</value>
+  </data>
+  <data name="message-password-weak" xml:space="preserve">
+    <value>密码强度不够！</value>
+  </data>
+  <data name="message-two-factor-required" xml:space="preserve">
+    <value>需要双因素身份验证</value>
+  </data>
+  <data name="message-unknown-error" xml:space="preserve">
+    <value>发生未知错误</value>
+  </data>
+  <data name="message-user-locked-out" xml:space="preserve">
+    <value>用户已被锁定</value>
+  </data>
+  <data name="message-password-validation" xml:space="preserve">
+    <value>密码必须至少包含 8 个字符</value>
+  </data>
+  <data name="message-email-exists" xml:space="preserve">
+    <value>电子邮件已存在</value>
+  </data>
+  <data name="message-email-format" xml:space="preserve">
+    <value>电子邮件格式不正确</value>
+  </data>
+  <data name="message-email-required" xml:space="preserve">
+    <value>电子邮件为必填项！</value>
+  </data>
+  <data name="message-firstname-required" xml:space="preserve">
+    <value>必须填写名字！</value>
+  </data>
+  <data name="message-lastname-required" xml:space="preserve">
+    <value>姓氏为必填项！</value>
+  </data>
+  <data name="message-login-not-allowed" xml:space="preserve">
+    <value>不允许登录</value>
   </data>
 </root>

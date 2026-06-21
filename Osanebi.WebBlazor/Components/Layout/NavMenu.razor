@@ -1,10 +1,12 @@
-﻿<MudNavMenu>
-    <MudNavLink Href="/" Match="NavLinkMatch.All">Dashboard</MudNavLink>
-    <MudNavLink Href="/servers" Match="NavLinkMatch.Prefix">Servers</MudNavLink>
-    <MudNavGroup Title="Settings" Expanded="true">
-        <MudNavLink Href="/users" Match="NavLinkMatch.Prefix">Users</MudNavLink>
-        <MudNavLink Href="/security" Match="NavLinkMatch.Prefix">Security</MudNavLink>
+﻿@inject IStringLocalizer<Resource> localizer;
+
+<MudNavMenu>
+    <MudNavLink Href="/" Match="NavLinkMatch.All">Home</MudNavLink>
+    <MudNavLink Href="/identity/user-profile" Match="NavLinkMatch.Prefix">@localizer["title-user-profile"]</MudNavLink>
+    <MudNavGroup Title="Identity" Expanded="true">
+        <MudNavLink Href="/identity/login" Match="NavLinkMatch.Prefix">@localizer["title-login"]</MudNavLink>
+        <MudNavLink Href="/identity/register" Match="NavLinkMatch.Prefix">@localizer["title-register"]</MudNavLink>
     </MudNavGroup>
-    <MudNavLink Href="/about" Match="NavLinkMatch.Prefix">About</MudNavLink>
+    <MudNavLink Href="/about" Match="NavLinkMatch.Prefix">@localizer["title-about"]</MudNavLink>
 </MudNavMenu>
 

@@ -51,7 +51,8 @@ namespace Osanebi.WebBlazor
 
             // Register the custom services
             builder.Services.AddMudServices();
-            builder.Services.AddScoped(sp => new HttpClient { 
+            builder.Services.AddScoped(sp => new HttpClient
+            {
                 BaseAddress = new Uri(apiBaseAddress)
             });
 
