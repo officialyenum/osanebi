@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.Options;
+﻿using MailKit.Net.Smtp;
+using Microsoft.Extensions.Options;
 using MimeKit;
-using MailKit.Net.Smtp;
 using Osanebi.Utility.Utility;
 
 namespace Osanebi.Utility

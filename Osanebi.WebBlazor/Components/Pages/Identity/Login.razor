@@ -1,13 +1,9 @@
 ﻿@page "/identity/login"
 
-@using Osanebi.Model.ApplicationModels
-@using Osanebi.Model.InputModels
-@using Osanebi.WebBlazor.Validator
-
-@inject HttpClient http
 @inject IStringLocalizer<Resource> localizer
 @inject NavigationManager navigationManager
 @inject IJSRuntime jsRuntime
+@inject IAuthenticationService authenticationService
 
 <MudPaper Style="position:relative", Class="pa-4" Outlined="false" Square="false" Elevation="0">
     <MudText Typo="Typo.h3">@localizer["title-login"]</MudText>
@@ -33,7 +29,7 @@
                     <div class="d-flex align-center justify-space-between mt-4">
                         <MudSpacer/>
                         <MudButton Variant="Variant.Outlined" Color="Color.Primary" DropShadow="false" OnClick="@(() => {_form.ResetAsync(); _form.ResetValidationAsync();})" Class="mx-2">@localizer["btn-reset"]</MudButton>
-                        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Disabled="@(!_success)" Class="ml-auto" OnClick="@(async () => await HandleValidSubmit())">@localizer["btn-login"]</MudButton>
+                        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Disabled="@(!_success)" Class="ml-auto" OnClick="@(async () => await SubmitForm())">@localizer["btn-login"]</MudButton>
                     </div>
                     <div class="d-flex align-center justify-space-between mt-4">
 
@@ -59,45 +55,20 @@
     string[] _errors = [];
     MudForm _form = new();
     ApplicationUserLoginInputModel _model = new ApplicationUserLoginInputModel { Email = "", Password = "" };
-
-    private async Task HandleValidSubmit()
+    
+    private async Task SubmitForm()
     {
-        ChangeLoadingState();
-        var response = await http.PostAsJsonAsync("Identity/Authentication/Login", _model);
-        ChangeLoadingState();
-        if (response.IsSuccessStatusCode)
+        _loading = true;
+        var response = await authenticationService.LoginAsync(_model);
+        _loading = false;
+        if (response.IsSuccess)
         {
-            navigationManager.NavigateTo("Identity/UserProfile");
+                navigationManager.NavigateTo("Identity/UserProfile");
         }
-        else
+        else 
         {
-            var errorResponse = await response.Content.ReadFromJsonAsync<ResponseModel<bool>>();
-            var localizedErrorMessage = GetLocalizedErrorMessage(errorResponse?.Message);
-            _errors = new string[] { localizedErrorMessage };
-        }
-
-        void ChangeLoadingState()
-        {
-            _loading = !_loading;
-            StateHasChanged();
-        }
-
-        string GetLocalizedErrorMessage(string errorMessage)
-        {
-            var resourceKey = GetResourceKeyForApiMessage(errorMessage);
-            return localizer[resourceKey];
-        }
-
-        string GetResourceKeyForApiMessage(string errorMessage)
-        {
-            return errorMessage switch
-            {
-                "User is locked out." => "message-user-locked-out",
-                "Login is not allowed." => "message-login-not-allowed",
-                "Two-factor authentication is required." => "message-two-factor-required",
-                "Invalid login attempt." => "message-invalid-login",
-                _ => "message-login-failed"
-            };
-        }
+            _errors = new string[] { response.Message ?? string.Empty };
+         }
+        
     }
 }

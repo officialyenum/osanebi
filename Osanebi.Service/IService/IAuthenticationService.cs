@@ -7,11 +7,11 @@ namespace Osanebi.Service.IService
     {
         Task<ResponseModel<bool>> LoginAsync(ApplicationUserLoginInputModel model);
         Task<ResponseModel<bool>> RegisterAsync(ApplicationUserRegisterInputModel nodel);
-        Task<ResponseModel<bool>> ConfirmEmailAsync(ApplicationUserConfirmEmailInputModel model);
-        Task<ResponseModel<bool>> ConfirmEmailVerifyCodeAsync(ApplicationUserConfirmEmailInputModel model);
-        Task<bool> ForgotPasswordAsync(ApplicationUserRegisterInputModel model);
+        Task<ResponseModel<bool>> ConfirmEmailAsync(ApplicationUserVerificationBaseInputModel model);
+        Task<ResponseModel<bool>> ConfirmEmailVerifyCodeAsync(ApplicationUserVerificationBaseInputModel model);
+        Task<ResponseModel<bool>> ForgotPasswordAsync(ApplicationUserForgotPasswordInputModel model);
+        Task<ResponseModel<bool>> ChangePasswordAsync(ApplicationUserForgotPasswordInputModel model);
         Task<bool> ResetPasswordAsync(ApplicationUserRegisterInputModel model);
-        Task<bool> ChangePasswordAsync(ApplicationUserRegisterInputModel model);
         Task<bool> RefreshTokenAsync(ApplicationUserRegisterInputModel model);
     }
 }

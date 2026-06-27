@@ -4,10 +4,7 @@ using Osanebi.Model.ApplicationModels;
 using Osanebi.Model.IdentityModels;
 using Osanebi.Model.InputModels;
 using Osanebi.Service.IService;
-using Osanebi.Utility;
 using Osanebi.Utility.Utility;
-using System.Net.Mail;
-using System.Net.Mime;
 
 namespace Osanebi.Service
 {
@@ -17,16 +14,6 @@ namespace Osanebi.Service
         IApplicationEmailSender applicationEmailSender
         ) : IAuthenticationService
     {
-        public Task<bool> ChangePasswordAsync(ApplicationUserRegisterInputModel model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> ForgotPasswordAsync(ApplicationUserRegisterInputModel model)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<ResponseModel<bool>> LoginAsync(ApplicationUserLoginInputModel model)
         {
             var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, false, false);
@@ -92,7 +79,7 @@ namespace Osanebi.Service
 
         }
 
-        public async Task<ResponseModel<bool>> ConfirmEmailAsync(ApplicationUserConfirmEmailInputModel model)
+        public async Task<ResponseModel<bool>> ConfirmEmailAsync(ApplicationUserVerificationBaseInputModel model)
         {
 
             ArgumentNullException.ThrowIfNull(model.Email);
@@ -140,8 +127,11 @@ namespace Osanebi.Service
             };
         }
 
-        public async Task<ResponseModel<bool>> ConfirmEmailVerifyCodeAsync(ApplicationUserConfirmEmailInputModel model)
+        public async Task<ResponseModel<bool>> ConfirmEmailVerifyCodeAsync(ApplicationUserVerificationBaseInputModel model)
         {
+            ArgumentNullException.ThrowIfNull(model.Email);
+            ArgumentNullException.ThrowIfNull(model.Code);
+
             var user = await userManager.FindByEmailAsync(model.Email);
             if (user == null)
             {
@@ -151,8 +141,6 @@ namespace Osanebi.Service
                     Message = "User not found"
                 };
             }
-
-            model.FullName = $"{user.FirstName} {user.LastName}";
             bool isCodeValid = user.VerificationCode != null && user.VerificationCode.ToString() == model.Code;
             if (isCodeValid)
             {
@@ -176,6 +164,84 @@ namespace Osanebi.Service
                 };
             }
         }
+
+        public async Task<ResponseModel<bool>> ForgotPasswordAsync(ApplicationUserForgotPasswordInputModel model)
+        {
+            ArgumentNullException.ThrowIfNull(model.Email);
+
+            var user = await userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                return new ResponseModel<bool>
+                {
+                    IsSuccess = false,
+                    Message = "User not found",
+                    Data = false
+                };
+            }
+            user.VerificationCode = GenerateVerificationCode();
+            var result = await userManager.UpdateAsync(user);
+
+            if (!result.Succeeded)
+            {
+                return new ResponseModel<bool>
+                {
+                    IsSuccess = false,
+                    Message = "Failed to Save Verification Code"
+                };
+            }
+
+            //send email with verification code
+            model.Code = user.VerificationCode.ToString();
+            model.FullName = $"{user.FirstName} {user.LastName}";
+            await SendVerificationEmailAsync(model);
+            return new ResponseModel<bool>
+            {
+                IsSuccess = true,
+                Message = "Verification code sent Successfully",
+            };
+        }
+
+        public async Task<ResponseModel<bool>> ChangePasswordAsync(ApplicationUserForgotPasswordInputModel model)
+        {
+            ArgumentNullException.ThrowIfNull(model.Email);
+            ArgumentNullException.ThrowIfNull(model.Code);
+            ArgumentNullException.ThrowIfNull(model.Password);
+
+            var user = await userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                return new ResponseModel<bool>
+                {
+                    IsSuccess = false,
+                    Message = "User not found"
+                };
+            }
+
+            bool isCodeValid = user.VerificationCode != null && user.VerificationCode.ToString() == model.Code;
+            if (isCodeValid)
+            {
+                var token = await userManager.GeneratePasswordResetTokenAsync(user);
+                var result = await userManager.ResetPasswordAsync(user, token, model.Password);
+                return new ResponseModel<bool>
+                {
+                    IsSuccess = result.Succeeded,
+                    Message = result.Succeeded ? "Password changed successfully" : "Password change failed",
+                    Data = true
+                };
+            }
+            else
+            {
+                return new ResponseModel<bool>
+                {
+                    IsSuccess = false,
+                    Message = "Invalid Confirmation Code",
+                    Data = true
+                };
+            }
+        }
+
+
         public Task<bool> ResetPasswordAsync(ApplicationUserRegisterInputModel model)
         {
             throw new NotImplementedException();
@@ -187,9 +253,9 @@ namespace Osanebi.Service
             return (short)random.Next(1000, 9999);
         }
 
-        private async Task SendVerificationEmailAsync(ApplicationUserConfirmEmailInputModel model)
+        private async Task SendVerificationEmailAsync(ApplicationUserVerificationBaseInputModel model)
         {
-            MimeMessage mail = new ();
+            MimeMessage mail = new();
             mail.To.Add(new MailboxAddress(model.FullName, model.Email));
             mail.Subject = "Osanebi - Email Confirmation";
             var emailContent = model.EmailTemplate.Replace("{FullName}", model.FullName)
@@ -209,5 +275,6 @@ namespace Osanebi.Service
             }
 
         }
+
     }
 }

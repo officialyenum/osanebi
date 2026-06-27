@@ -29,7 +29,7 @@ namespace Osanebi.Api.Areas.Identity
 
         [HttpPost("confirm-email")]
         [DisplayName("Confirm Email")]
-        public async Task<IActionResult> ConfirmEmail([FromBody] ApplicationUserConfirmEmailInputModel model)
+        public async Task<IActionResult> ConfirmEmail([FromBody] ApplicationUserVerificationBaseInputModel model)
         {
             var result = await authenticationService.ConfirmEmailAsync(model);
             return result.IsSuccess ? Ok() : BadRequest(result);
@@ -37,7 +37,7 @@ namespace Osanebi.Api.Areas.Identity
 
         [HttpPost("confirm-email-verify-code")]
         [DisplayName("Confirm Email Verify Code")]
-        public async Task<IActionResult> ConfirmEmailVerifyCode([FromBody] ApplicationUserConfirmEmailInputModel model)
+        public async Task<IActionResult> ConfirmEmailVerifyCode([FromBody] ApplicationUserVerificationBaseInputModel model)
         {
             var result = await authenticationService.ConfirmEmailVerifyCodeAsync(model);
             return result.IsSuccess ? Ok() : BadRequest(result);
@@ -45,10 +45,18 @@ namespace Osanebi.Api.Areas.Identity
 
         [HttpPost("forgot-password")]
         [DisplayName("Forgot Password Endpoint")]
-        public async Task<IActionResult> ForgotPassword([FromBody] ApplicationUserRegisterInputModel model)
+        public async Task<IActionResult> ForgotPassword([FromBody] ApplicationUserForgotPasswordInputModel model)
         {
             var result = await authenticationService.ForgotPasswordAsync(model);
-            return result ? Ok(result) : StatusCode(500);
+            return result.IsSuccess ? Ok() : BadRequest(result);
+        }
+
+        [HttpPost("change-password")]
+        [DisplayName("Change Password Endpoint")]
+        public async Task<IActionResult> ChangePassword([FromBody] ApplicationUserForgotPasswordInputModel model)
+        {
+            var result = await authenticationService.ChangePasswordAsync(model);
+            return result.IsSuccess ? Ok() : BadRequest(result);
         }
 
         [HttpPost("reset-password")]
@@ -59,13 +67,7 @@ namespace Osanebi.Api.Areas.Identity
             return result ? Ok(result) : StatusCode(500);
         }
 
-        [HttpPost("change-password")]
-        [DisplayName("Change Password Endpoint")]
-        public async Task<IActionResult> ChangePassword([FromBody] ApplicationUserRegisterInputModel model)
-        {
-            var result = await authenticationService.ChangePasswordAsync(model);
-            return result ? Ok(result) : StatusCode(500);
-        }
+        
 
         [HttpPost("refresh-token")]
         [DisplayName("Refresh Token Endpoint")]

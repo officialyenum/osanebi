@@ -1,15 +1,9 @@
 ﻿@page "/identity/register"
 
-@using Osanebi.Model.ApplicationModels
-@using Osanebi.Model.InputModels
-@using Osanebi.WebBlazor.Validator
-@using Osanebi.Model.Enums
-@using System.Text.RegularExpressions
-@using System.ComponentModel.DataAnnotations
-
 @inject HttpClient http
 @inject IStringLocalizer<Resource> localizer
 @inject NavigationManager navigationManager
+@inject IAuthenticationService authenticationService
 
 <MudPaper Style="position:relative" , Class="pa-4" Outlined="false" Square="false" Elevation="0">
     <MudText Typo="Typo.h3">@localizer["title-register"]</MudText>
@@ -54,7 +48,6 @@
                                   Required="true"
                                   RequiredError="@localizer["message-password-required"]" />
                     <MudTextField T="string"
-                                  @bind-Value="_model.ConfirmPassword"
                                   Label=@localizer["input-confirm-password"]
                                   HelperText="Choose a strong password"
                                   InputType="InputType.Password"
@@ -66,7 +59,7 @@
 
                         <MudSpacer />
                         <MudButton Variant="Variant.Outlined" Color="Color.Primary" DropShadow="false" OnClick="@(() => { _form.ResetAsync(); _form.ResetValidationAsync(); })" Class="mx-2">@localizer["btn-reset"]</MudButton>
-                        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Disabled="@(!_success)" Class="ml-auto" OnClick="@(async () => await HandleValidSubmit())">@localizer["btn-register"]</MudButton>
+                        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Disabled="@(!_success)" Class="ml-auto" OnClick="@(async () => await SubmitForm())">@localizer["btn-register"]</MudButton>
                     </div>
                 </MudForm>
             </MudPaper>
@@ -88,30 +81,23 @@
         FirstName = "",
         LastName = "",
         Email = "", 
-        Password = "",
-        ConfirmPassword = "",
+        Password = ""
     };
 
-    private async Task HandleValidSubmit()
+    private async Task SubmitForm()
     {
-        ChangeLoadingState();
-        var response = await http.PostAsJsonAsync("Identity/Authentication/register", _model);
-        ChangeLoadingState();
-        if (response.IsSuccessStatusCode)
+        _loading = true;
+        var response = await authenticationService.RegisterAsync(_model);
+        _loading = false;
+        if (response.IsSuccess)
         {
             navigationManager.NavigateTo("Identity/login");
         }
         else
         {
-            var errorResponse = await response.Content.ReadFromJsonAsync<ResponseModel<bool>>();
-            var localizedErrorMessage = GetLocalizedErrorMessage(errorResponse?.Message ?? "message-unknown-error");
-            _errors = new string[] { localizedErrorMessage };
+            _errors = new string[] { response.Message ?? string.Empty };
         }
-    }
 
-    private void ChangeLoadingState()
-    {
-        _loading = !_loading;
     }
 
     private string? PasswordMatch(string password, string confirmPassword)
@@ -121,21 +107,6 @@
             return localizer["message-confirm-password-match"];
         }
         return null;
-    }
-
-    string GetLocalizedErrorMessage(string errorMessage)
-    {
-        var resourceKey = GetResourceKeyForApiMessage(errorMessage);
-        return localizer[resourceKey];
-    }
-
-    string GetResourceKeyForApiMessage(string errorMessage)
-    {
-        return errorMessage switch
-        {
-            "DuplicateUsername" => "message-email-exists",
-            _ => "message-unknown-error"
-        };
     }
 
     private KeyValuePair<Gender, string>[] GetLocalizedGenderArrayFromEnum()
