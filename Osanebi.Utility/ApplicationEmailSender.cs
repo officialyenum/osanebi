@@ -1,7 +1,7 @@
 ﻿using MailKit.Net.Smtp;
 using Microsoft.Extensions.Options;
 using MimeKit;
-using Osanebi.Utility.Utility;
+using Osanebi.Utility.IUtility;
 
 namespace Osanebi.Utility
 {

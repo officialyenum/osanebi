@@ -4,7 +4,7 @@ using Osanebi.Model.ApplicationModels;
 using Osanebi.Model.IdentityModels;
 using Osanebi.Model.InputModels;
 using Osanebi.Service.IService;
-using Osanebi.Utility.Utility;
+using Osanebi.Utility.IUtility;
 
 namespace Osanebi.Service
 {

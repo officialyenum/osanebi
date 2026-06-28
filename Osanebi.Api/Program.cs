@@ -1,13 +1,17 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using Osanebi.DataAccess;
 using Osanebi.Model.IdentityModels;
 using Osanebi.Service;
 using Osanebi.Service.IService;
 using Osanebi.Utility;
-using Osanebi.Utility.Utility;
+using Osanebi.Utility.IUtility;
 using System.Diagnostics;
+using System.Text;
+using TokenHandler = Osanebi.Utility.TokenHandler;
 
 namespace Osanebi.Api
 {
@@ -24,7 +28,7 @@ namespace Osanebi.Api
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-            builder.Services.AddOpenApi();
+            //builder.Services.AddOpenApi();
             builder.Services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -32,6 +36,14 @@ namespace Osanebi.Api
                     Version = "v1",
                     Title = "Osanebi API",
                     Description = "An ASP.NET Core Web API for Osanebi application.",
+                });
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description = "JWT Authorization header usin the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                    Name = "Autorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
                 });
             });
 
@@ -45,6 +57,28 @@ namespace Osanebi.Api
             builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
             builder.Services.Configure<EmailConfiguration>(builder.Configuration.GetSection("EmailConfiguration"));
             builder.Services.AddSingleton<IApplicationEmailSender, ApplicationEmailSender>();
+            builder.Services.Configure<TokenConfiguration>(builder.Configuration.GetSection("TokenConfiguration"));
+            builder.Services.AddSingleton<ITokenHandler, TokenHandler>();
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+                .AddJwtBearer(o => 
+                    o.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidAudience = builder.Configuration["TokenConfiguration:Audience"],
+                        ValidIssuer = builder.Configuration["TokenConfiguration:Issuer"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["TokenConfiguration:SecretKey"]!)),
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidateLifetime = true,
+                        ClockSkew = TimeSpan.Zero,
+                    }
+                );
 
 
             var app = builder.Build();

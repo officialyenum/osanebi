@@ -1,6 +1,6 @@
 ﻿using MimeKit;
 
-namespace Osanebi.Utility.Utility
+namespace Osanebi.Utility.IUtility
 {
     public interface IApplicationEmailSender
     {
